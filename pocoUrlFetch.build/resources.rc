@@ -1,0 +1,3 @@
+#include "winuser.h"
+3 RCDATA "pocoUrlFetch.build/__constants.bin"
+1 RT_MANIFEST resources.manifest
