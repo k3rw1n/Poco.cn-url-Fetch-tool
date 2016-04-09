@@ -7,10 +7,13 @@ def getHtml(url):
     # page = urllib.urlopen(url)
     # html = page.read()
     # return html
-    browser = WebBrowser()
-    html = browser._request(url)
-    print type(html)
-    return html
+
+    # browser = WebBrowser()
+    # html = browser._request(url)
+    # print type(html)
+    # return html
+    f=open('html.txt','r')
+    return f.read()
 
 def saveImg(urlList):
     x = 0
@@ -21,15 +24,19 @@ def saveImg(urlList):
 
 def getImg(html):
     
-    rg=re.compile(r'(?<=data_org_bimg=")http:\/\/image17-c.poco.cn\/mypoco\/myphoto\/\d{8}\/\d{2}\/\d+.jpg\?\d+x\d+_\d+',re.IGNORECASE |re.DOTALL)
+    rg=re.compile(r'(?<=data_org_bimg\s=")http:\/\/image17-c.poco.cn\/mypoco\/myphoto\/\d{8}\/\d{2}\/\d+.jpg\?\d+x\d+_\d+')
     m = rg.findall(html)
-    # print m
     
     print m
-    with open('url.txt', 'w') as uf:
-        for i in imgList:
-            uf.write(str(i))
-            uf.write('\n')
+    # with open('url.txt', 'w') as uf:
+    #     for i in imgList:
+    #         uf.write(str(i))
+    #         uf.write('\n')
+    x=0
+    for imgurl in m:
+        urllib.urlretrieve(imgurl,'%s.jpg' % x)
+        x = x + 1
+    print "OK"
 
 if __name__ == '__main__':
     # print u"请输入POCO网链接"

@@ -1,0 +1,2288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>外星观光-人像摄影-POCO摄影作品展示</title>
+<meta http-equiv="content-type" content="text/html; charset=gbk">
+<meta name="mobile-agent" content="format=xhtml;url=http://m.poco.cn/vision/detail.php?photo_id=5049051">
+<link rel="alternate" type="application/vnd.wap.xhtml+xml" media="handheld" href="http://m.poco.cn/vision/detail.php?photo_id=5049051"/> 
+<script language="JavaScript" src="http://wwwcdn.poco.cn/js_common/common/client.js"></script>
+<script language="JavaScript">(function(n){var cd=window.Client.device;if(document.cookie.indexOf("pc_read")==-1&& cd && cd.name!="mac" && cd.name!="pc" && cd.name!="ipad"){window.location.href=n}})("http://m.poco.cn/vision/detail.php?photo_id=5049051")</script>
+<link rel="stylesheet" type="text/css" href="http://wwwcdn.poco.cn/css_common/v3/??M0UxMEJEOUY=.css&t=1404151234.css">
+<script src="http://wwwcdn.poco.cn/js_common/??Nzk5NkZBQTA=.js&t=201303211653571234.js"></script> 
+<script charset="utf-8" src="http://cb-c.poco.cn/seajs/??2.1.1/sea.js,plugins/seajs-text/1.0.2/seajs-text.js,plugins/seajs-style/1.0.2/seajs-style.js,plugins/seajs-combo/1.0.1/seajs-combo.js"></script>
+<script>
+
+(function(window, seajs) {
+    seajs.config({
+        paths: {
+            utility: 'http://cb-c.poco.cn/utility',
+            matcha: 'http://cb-c.poco.cn/matcha',
+            poco: 'http://cb-c.poco.cn/poco'
+        },
+
+        alias: {
+            '$': 'utility/jquery/1.11.0/jquery',
+            '$-debug': 'utility/jquery/1.11.0/jquery-debug',
+            'jquery': 'utility/jquery/1.11.0/jquery',
+            'jquery-debug': 'utility/jquery/1.11.0/jquery-debug'
+        },
+		comboExcludes: function(uri) {
+            return uri.indexOf('http://cb-c.poco.cn/') === -1;
+        },
+        charset: 'utf-8'
+    });
+})(window, seajs);
+</script>
+
+<meta name="Keywords" content="情绪,人像摄影"/>
+<meta name="Description" content="&nbsp;听说日食过后地球万物灵动，走，我们去看看，新鲜的氧气早已漫在空中，穿透我寸寸肌肤。出镜：@侬本Passionate&nbsp;@地瓜nice&nbsp;&nbsp;摄影：@小黑Ray_&nbsp;"/>
+ 
+<script type="text/javascript" src="http://www.poco.cn/js_common/common/pocoVerifiedUse.js"></script>
+</head> 
+<script language="JavaScript">
+
+var more_act_num;
+var genus 		 = encodeURI('人像摄影');
+var type    	 = '0';
+var user_id 	 = "175296647";
+var widescreen 	 = readCookie('widescreen');
+var G_CMT_LOADED = 0;
+// 兼容旧版
+window.__act_type_id = 3;
+window.__act_item_id = 5049051;
+window.__act_id = 35980668;
+window.__user_id = 175296647;
+window.__user_nickname = '小黑Ray';
+
+
+
+if( widescreen==1 )
+	document.write('<body class="wide">');
+else
+	document.write('<body>');
+	
+function resize_img(img_obj,w,h,try_again){
+    
+	var img   = new Image();
+	img_obj.removeAttribute("width");
+	img_obj.removeAttribute("heigth");	
+	var img_w = img_obj.width;
+	var img_h = img_obj.height;
+	if( img_h==0 && img_w==0 && try_again ){
+		
+		setTimeout( function(){ set_img_size(img_obj,w,h,false) },1000 )
+		
+	}
+	if( img_w<w && img_h<h )return false;
+	var scale_x = img_w/w;
+	var scale_y = img_h/h;
+	if( scale_x > scale_y ){
+		
+		img_obj.width  = w;
+		img_obj.heigth = img_h/scale_x;
+		
+	}
+	else{
+		
+		img_obj.width  = img_w/scale_y;
+		img_obj.heigth = h;
+		
+	}
+    
+}
+
+function check_is_login(){	
+
+	var member_id = login_id;
+	if( !member_id || member_id==0){
+			 loginApp.set({
+
+				reg_back_link:'http://www1.poco.cn/login/',
+				b_reload:false,
+				b_succ_box:true,                     	
+				onCountDownComplete:function(){                         		
+				
+				} ,
+				CustomApi:function(){
+					
+					actBase.subCommentForm();
+				
+				}
+			});
+			loginApp.loginBox();
+			return false;
+
+	}
+	return true;
+		
+}
+function set_tab_style(menu_pre,box_pre,index,menu_cur_class,count){
+	
+	for( i=0;i<count;i++ ){
+		
+		document.getElementById(menu_pre+i).className = '';
+		document.getElementById(box_pre+i).style.display    = 'none';
+	
+	}
+		document.getElementById(menu_pre+index).className = menu_cur_class;
+		document.getElementById(box_pre+index).style.display     = '';
+
+}
+
+function set_display_mode(first_load,mode){
+			
+	if( mode=='default' || !mode ){
+		
+		document.body.className = '';		
+		if(!first_load){
+		
+			dataLazyload = false;
+			set_img_size(mode);
+
+		}
+		writeCookie('widescreen','',8760,'photo.poco.cn','/');
+		
+	}
+	else{
+	
+		document.body.className = 'wide';	
+		set_img_size(mode);
+		writeCookie('widescreen','1',8760,'photo.poco.cn','/');
+	
+	}
+	
+}
+function set_img_size(mode){
+
+	var listDiv    			= $('J_photo_list');
+	var listDivImg 			= listDiv.getElementsByTagName('img');
+	var listDivImgLength	= listDivImg.length;
+	if( mode=='default' || !mode ){
+		
+		for( i=0;i<listDivImgLength;i++ ){
+			
+			listDivImg[i].setAttribute("src",listDivImg[i].getAttribute("data_img_small")); 
+			
+		}
+	
+	}
+	else{
+		
+		for( i=0;i<listDivImgLength;i++ ){
+ 
+			listDivImg[i].setAttribute("src",listDivImg[i].getAttribute("data_org_bimg"));
+		
+		}
+	
+	}
+
+}
+
+</script> 
+<!-- 公共头部 开始 -->
+    <link rel="stylesheet" charset="utf-8" href="//cb-c.poco.cn/pocoui/channel/photo/header/1.0.9/header.css">
+    <link rel="stylesheet" charset="utf-8" href="//www.poco.cn/css_common/v3/channel/photo/color_v4.css?201405051539">
+
+
+
+
+<div id="J-global-topbar" class="global-reset global-topbar">
+<div class="global-topbar-body fn-clear">
+    <ul class="global-topbar-nav">
+
+        <li class="global-topbar-item">
+            <a class="item-trigger" href="//www.poco.cn/" target="_self">
+                <span class="item-content">
+                    <span class="text"><span class="en-text">POCO</span>网首页</span>
+                </span>
+            </a>
+        </li>
+        <li class="global-topbar-item global-topbar-item-community">
+            <a class="item-trigger" href="javascript:;">
+                <span class="item-content">
+                    <span class="text">兴趣社区</span>
+                </span>
+            </a>
+            <div class="global-dropdown-menu global-dropdown-menu-community">
+                <ul class="fn-clear">
+                                        <li><a href="//photo.poco.cn/" target="_self">摄影</a></li>
+                                        <li><a href="//food.poco.cn/" target="_self">美食</a></li>
+                                        <li><a href="//cook.poco.cn/" target="_self">菜谱</a></li>
+                                        <li><a href="//travel.poco.cn/" target="_self">旅游</a></li>
+                                        <li><a href="//box.poco.cn/" target="_self">达物</a></li>
+                                        <li class="mobile"><a href="//mobile.poco.cn/" target="_self">手机拍客</a></li>
+                                        <li><a href="//auto.poco.cn/" target="_self">汽车</a></li>
+                                        <li><a href="//lady.poco.cn/" target="_self">女性</a></li>
+                                        <li><a href="//model.poco.cn/" target="_self">模特</a></li>
+                                    </ul>
+            </div>
+        </li>
+        <li class="global-topbar-item global-topbar-item-app">
+            <a class="item-trigger" href="javascript:;">
+                <span class="item-content">
+                    <span class="text">无线应用</span>
+                </span>
+            </a>
+            <div class="global-dropdown-menu global-dropdown-menu-app">
+                <ul class="fn-clear">
+                                        <li>
+                        <a href="//phone.poco.cn/app/camera/" target="_blank">
+                            <i class="app-icon icon-camera"></i>
+                            <h2 class="app-title">POCO相机</h2>
+                            <p class="app-desc">创作利器！</p>
+                                                                                </a>
+                    </li>
+                                        <li>
+                        <a href="//phone.poco.cn/app/beautycamera/" target="_blank">
+                            <i class="app-icon icon-beautycamera"></i>
+                            <h2 class="app-title">美人相机</h2>
+                            <p class="app-desc">2亿美女的自拍首选</p>
+                                                        <i class="icon hot-icon"></i>                        </a>
+                    </li>
+                                        <li>
+                        <a href="//phone.poco.cn/app/babycamera/" target="_blank">
+                            <i class="app-icon icon-babycamera"></i>
+                            <h2 class="app-title">亲子相机</h2>
+                            <p class="app-desc">新妈手机必备APP</p>
+                                                                                </a>
+                    </li>
+                                        <li>
+                        <a href="//phone.poco.cn/app/ip/" target="_blank">
+                            <i class="app-icon icon-ip"></i>
+                            <h2 class="app-title">印象摄影</h2>
+                            <p class="app-desc">手机视觉杂志第一品牌</p>
+                                                                                </a>
+                    </li>
+                                        <li>
+                        <a href="//phone.poco.cn/app/jane/" class="va-middle" target="_blank">
+                            <i class="app-icon icon-foodcamera"></i>
+                            <h2 class="app-title">简拼</h2>
+                            
+                                                                                </a>
+                    </li>
+                                        <li>
+                        <a href="//phone.poco.cn/app/photomixer/" class="va-middle" target="_blank">
+                            <i class="app-icon icon-pocoalbum"></i>
+                            <h2 class="app-title">图片合成器</h2>
+                            
+                                                                                </a>
+                    </li>
+                                        <li>
+                        <a href="//phone.poco.cn/app/photoskill/" class="va-middle" target="_blank">
+                            <i class="app-icon icon-photoskill"></i>
+                            <h2 class="app-title">摄影技巧</h2>
+                            
+                                                                                </a>
+                    </li>
+                                        <li>
+                        <a href="//phone.poco.cn/">更多产品&gt;&gt;</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="global-topbar-item">
+            <a class="item-trigger" href="javascript:;">
+                <span class="item-content">
+                    <span class="text">更多</span>
+                </span>
+            </a>
+            <div class="global-dropdown-menu global-dropdown-menu-more">
+                <ul class="fn-clear">
+                                        <li><a href="//read.poco.cn/" target="_self">电子杂志</a></li>
+                                        <li><a href="//info.poco.cn/" target="_self">摄影服务</a></li>
+                                        <li><a href="//event.poco.cn/" target="_self">活动</a></li>
+                                        <li><a href="//my.poco.cn/" target="_self">MYPOCO空间</a></li>
+                                        <li><a href="//wo.poco.cn/" target="_self">WO窝</a></li>
+                                    </ul>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="global-topbar-account">
+        <li class="global-topbar-item photoapp-item">
+            <a class="item-trigger" href="javascript:;">
+                <span class="item-content">
+                    <i class="icon new-icon"></i>
+                    <i class="icon icon-mobile-l"></i>
+                    <i class="icon-angle"></i>
+                </span>
+            </a>
+            <div class="global-dropdown-menu global-dropdown-menu-photoapp">
+                <div class="qrcode"><i class="icon icon-qrcode-photoapp"></i></div>
+                <div class="mobile-qrcode-desc">
+                    <h3>POCO摄影手机版</h3>
+                    <a href="http://phone.poco.cn/app/photo/" target="_blank" class="icon icon-ios-dl"></a>
+                    <a href="http://phone.poco.cn/app/photo/" target="_blank" class="icon icon-android-dl"></a>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <div class="global-topbar-tips introduction-tips">
+        <a href="javascript:;" class="close-tips-button" role="hide-introduction">×</a>
+        <p>新导航介绍，<a href="http://blog1.poco.cn/myBlogDetail.php?&id=8597563&user_id=44368931&pri=&n=0" target="_blank">点击查看</a></p>
+    </div>
+</div>
+</div>
+
+<script>!function(a){function e(){var a,c;return(c=String(b.cookie).match(new RegExp("(?:^| )member_id(?:(?:=([^;]*))|;|$)")))&&c[1]&&(a=c[1]),a}function f(b){d>c&&(a.removeEventListener?a.removeEventListener(h,i):a.detachEvent("on"+h,i));var e=new Image;a.g_jsTrackerLog[d++]=e.src=b}function g(c,d,f){c=c||"",d=d||"",f=f||"";var g="//imgtj.poco.cn/pocotj_touch.css?touch=1&ip_addr=&tmp="+(new Date).getTime(),h=a.screen,i=["msg="+c,"file="+d,"line="+f,"scrolltop="+(b.body||b.documentElement).scrollTop,"screen="+(h.width+"x"+h.height),"islogin="+(e()?1:0)];return g+="&url=touch://Errorlistener/js/err_log"+encodeURIComponent("?"+i.join("&"))}if(!a.g_jsTrackerLog){var b=a.document,c=10,d=0;a.g_jsTrackerLog=[];var h="error",i=function(a,b,c){f(g(a,b,c))};a.addEventListener?a.addEventListener(h,i,!1):a.attachEvent("on"+h,i)}}(window);</script>
+<script>!function(a,b,c,d,e,f,g){function h(a){return function(){return g.push(a,arguments),f}}a[b]||(a[b]=f={args:g=[],config:h(1),use:h(2),on:h(3)},a.define=h(0),d=c.createElement("script"),d.id=b+"node",d.async=!0,d.src="//cb-c.poco.cn/seajs/??2.0.0/sea.js,plugins/seajs-text/1.0.2/seajs-text.js,plugins/seajs-style/1.0.2/seajs-style.js",e=c.getElementsByTagName("head")[0],e.appendChild(d))}(window,"seajs",document);seajs.config({
+    paths: {
+        utility: 'http://cb-c.poco.cn/utility',
+        poco: 'http://cb-c.poco.cn/poco',
+        matcha: 'http://cb-c.poco.cn/matcha'
+    },
+alias: {
+    '$': 'utility/jquery/1.11.0/jquery',
+    '$-debug': 'utility/jquery/1.11.0/jquery-debug',
+    'jquery': 'utility/jquery/1.11.0/jquery',
+    'jquery-debug': 'utility/jquery/1.11.0/jquery-debug'
+    },
+charset: 'utf-8'
+});</script>
+
+
+
+<div id="J-global-header" class="global-reset global-header">
+    <div class="global-common fn-clear">
+        <h1 class="global-logo"><a href="//photo.poco.cn/"></a></h1>
+
+        <div class="global-search">
+            <form target="_top" id="J-global-header-search-form" action="//my.poco.cn/tags/tag_search.php" target="_blank">
+            <div class="search-panel-fields">
+                <a href="javascript:;" class="search-tab" role="search-tab">
+                    <span class="search-tab-text">摄影</span><i class="angle-icon"></i>
+                </a>
+
+                <label for="q" class="placeholder">搜索你喜欢的</label>
+                <input type="text" id="q" name="q" class="search-input" placeholder="搜索你喜欢的" autocomplete="off" x-webkit-speech x-webkit-grammar="builtin:translate">
+
+                <a role="submit-search" class="search-trigger" href="javascript:;"><i class="global-header-icon search-icon" title="搜索"></i></a>
+            </div>
+
+            <input type="hidden" name="tag_search_referer_source" value="PHOTO_TOP_SEARCH">
+            <input type="hidden" name="ts_ids" id="J-global-header-search-type" value="3">
+            </form>
+            <div class="global-search-select-dropdown">
+                <ul class="select-content">
+                                        <li><a class="select-item" role="search-type" href="javascript:;" data-search-id="0">图片</a></li>
+                                        <li><a class="select-item" role="search-type" href="javascript:;" data-search-id="1">博客</a></li>
+                                        <li><a class="select-item" role="search-type" href="javascript:;" data-search-id="3">摄影</a></li>
+                                        <li><a class="select-item" role="search-type" href="javascript:;" data-search-id="7">美食</a></li>
+                                        <li><a class="select-item" role="search-type" href="javascript:;" data-search-id="6">美食DIY</a></li>
+                                        <li><a class="select-item" role="search-type" href="javascript:;" data-search-id="44">旅游</a></li>
+                                        <li><a class="select-item" role="search-type" href="javascript:;" data-search-id="8">人</a></li>
+                                        <li><a class="select-item" role="search-type" href="javascript:;" data-search-id="14">活动</a></li>
+                                        <li><a class="select-item" role="search-type" href="javascript:;" data-search-id="52">专题</a></li>
+                                        <li><a class="select-item" role="search-type" href="javascript:;" data-search-id="64">菜谱</a></li>
+                                        <li><a class="select-item" role="search-type" href="javascript:;" data-search-id="movie">电影</a></li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="global-nav">
+<ul class="global-nav-main fn-clear">
+        <li class="global-nav-item">
+        <a class="item-trigger" href="//photo.poco.cn/" target="_self"><span class="item-content">首页</span></a>
+    </li>
+        <li class="global-nav-item global-nav-item-current">
+        <a class="item-trigger" href="//photo.poco.cn/vision.php" target="_self"><span class="item-content">作品</span></a>
+    </li>
+        <li class="global-nav-item">
+        <a class="item-trigger" href="//photo.poco.cn/like/" target="_self"><span class="item-content">图片</span></a>
+    </li>
+        <li class="global-nav-item global-nav-item-has-dropdown">
+        <a class="item-trigger" href="//photo.poco.cn/club.php" target="_self"><span class="item-content">地区</span></a>
+            <div class="global-nav-item-dropdown-menu photo-nav-item-dropdown-menu photo-nav-item-dropdown-region"></div>
+        </li>
+        <li class="global-nav-item">
+        <a class="item-trigger" href="//photo.poco.cn/jiqiao/" target="_self"><span class="item-content">技巧</span></a>
+    </li>
+        <li class="global-nav-item">
+        <a class="item-trigger" href="//photo.poco.cn/quan/" target="_blank"><span class="item-content">影像圈<i class="global-header-icon new-icon"></i></span></a>
+    </li>
+        <li class="global-nav-item">
+        <a class="item-trigger" href="//photo.poco.cn/event/event_list.php" target="_self"><span class="item-content">外拍</span></a>
+    </li>
+        <li class="global-nav-item">
+        <a class="item-trigger" href="//model.poco.cn/" target="_blank"><span class="item-content">模特</span></a>
+    </li>
+        <li class="global-nav-item">
+        <a class="item-trigger" href="//yxylife.poco.cn/zt/poco/" target="_blank"><span class="item-content">摄影游<i class="global-header-icon new-icon"></i></span></a>
+    </li>
+        <li class="global-nav-item">
+        <a class="item-trigger" href="//photo.poco.cn/dianping/" target="_self"><span class="item-content">摄影点评</span></a>
+    </li>
+        <li class="global-nav-item">
+        <a class="item-trigger" href="//cav.poco.cn/cav/5d5927bded/0022802269/?url=http://www1.poco.cn/topic/canon_eos2015/" target="_blank"><span class="item-content">佳能EOS学院</span></a>
+    </li>
+        <li class="global-nav-item">
+        <a class="item-trigger" href="//photo.poco.cn/best_pocoer/" target="_self"><span class="item-content">红人</span></a>
+    </li>
+        <li class="global-nav-item global-nav-item-has-dropdown">
+        <a class="item-trigger" href="javascript:;"><span class="item-content item-content-with-more">更多<i class="photo-arrow-icon"><em></em><span></span></i></span></a>
+            <div class="global-nav-item-dropdown-menu photo-nav-item-dropdown-menu photo-nav-item-dropdown-more">
+            <ul>
+                                <li><a href="//photo.poco.cn/exhibit/" target="_blank">影展</a></li>
+                                <li><a href="//photo.poco.cn/vision/camera-upi-type-new.html" target="_blank">器材</a></li>
+                                <li><a href="//print.poco.cn/" target="_blank">个性印品</a></li>
+                                <li><a href="//photo.poco.cn/best_pocoer/rank.php" target="_blank">达人</a></li>
+                                <li><a href="//info.poco.cn/" target="_blank">商业频道</a></li>
+                            </ul>
+        </div>
+        </li>
+    </ul>
+</div>
+</div>
+
+
+<script>
+seajs.use(['poco/global/topbar/1.0.3/topbar', 'poco/global/header/1.0.0/header'], function(Topbar, Header) {
+    Topbar.init();
+    Header.init('photo');
+});
+</script>
+
+<!-- 公共头部 结束 -->
+<iframe id="post_frame" name="post_frame" class="dn"></iframe>
+<iframe id="act_frame" name="act_frame" marginheight="0" marginwidth="0" noresize="noResize" scrolling="no" frameborder="0" style="display:none; width:0px; height:0px;"></iframe>
+<div id="content">
+  <div class="column-page pt5">
+    <div class="banner pb15" id="J_top_bananer">
+	<iframe id="ams_iframe_78_1441_0" name="ams_iframe_78_1441_0" width="994" height="90" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" src="http://a-m-s.poco.cn/html/c_78/z_1441/a_0_all.html"></iframe>
+
+	</div>
+    <div class="grid_c2f">
+      <div class="col_main">
+        <div class="main_wrap">
+        <div class="column-wrap">
+        <div class="banner pb15" id="J_left_bananer">
+		<iframe id="ams_iframe_78_1441_0" name="ams_iframe_78_1441_0" width="994" height="90" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" src="http://a-m-s.poco.cn/html/c_78/z_1441/a_0_all.html"></iframe>
+		</div>
+          <!--位置-->
+          <div class="color5 mod-link-none clearfix">
+            <div class="mod-position fldi">
+			当前位置：<a href="./">摄影首页</a> &gt; <a href="http://photo.poco.cn/vision.php">作品展示</a> &gt; <a href="http://photo.poco.cn/vision.htx&index_type=hot&gid=0#list">人像摄影</a>
+			</div>
+            <div class="mod-change tr frdi">切换模式：
+              <label>			  
+                <input onclick="" type="radio" name="RadioGroup1" value="小图" id="display_mode_1" disabled="true"/>
+                小图</label>
+              <label>
+                <input onclick="" type="radio" name="RadioGroup1" value="大图" id="display_mode_2" disabled="true"/>
+                大图</label>				
+            </div>
+			<script language="JavaScript">
+
+			if( readCookie('widescreen')==1 ){
+				
+				$('display_mode_2').checked = 'checked';				
+			
+			}
+			else{
+				
+				$('display_mode_1').checked = 'checked';
+				
+			}
+			
+			window.addEvent('domready', function() {
+				
+				$('display_mode_1').disabled = false;
+				$('display_mode_2').disabled = false;
+				$('display_mode_1').addEvent('click',function(){
+										
+					set_display_mode(0,'default');
+				
+				});
+				$('display_mode_2').addEvent('click',function(){
+										
+					set_display_mode(0,'widescreen');
+				
+				})
+			})
+
+			</script>
+          </div>
+          <div id="J_content" class="mod-final-page-wrap border-color2">
+            <!--标题-->
+            <div class="listItem mod-link-none" id="user_intro">
+              <h3 class="Title color3 fn_wryh fn lh24 fl">外星观光</h3>
+			  <span id="J_act_info_is_vouch" class="ml10"></span><span id="J_act_info_is_award" class="ml5"></span>
+              <span class="page-copyright color2"><span class="fn_ta">&copy;</span>
+			  <a href="http://my.poco.cn/id-175296647.shtml" target="_blank">小黑Ray</a>
+			  			  <em class="poco_verified_icon_red"><img category="photo" apply_type="1" user_id="175296647" verified="1" src="http://my.poco.cn/manage/images/blank.gif"></em>
+			  			  <a href="http://my.poco.cn/credit_store/help_2.php#1" target="_blank">[乐园四级]</a>			  </span> 
+			  </div>
+            <!--信息-->
+            <div class="guild-hold border-color2 color6 mod-link-none clearfix">
+			<div class="so-long">
+              <div class="page-info-item fl">
+                <ul>
+                  <li class="item-time"><b class="icon common-bg"></b>2016-03-16</li>
+                  <li class="item-view"><b class="icon common-bg"></b><span id="J_act_info_top_hit_count"></span></li>
+                  <li class="item-praise"><b class="icon common-bg"></b><span id="J_act_info_top_vote_count"></span></li>
+                  <li class="item-discuss"><b class="icon common-bg"></b><span id="J_act_info_top_cmt_count"></span></li>
+                </ul>
+              </div>
+              <span class="fl pr20">|</span>
+              <div class="address-info-item pl5 fl">
+                <ul>
+                  <li class="item-level"><b class="icon common-bg"></b><a target="_blank" href="http://photo.poco.cn/vision.htx&index_type=hot&gid=0#list">人像摄影</a>
+				  </li>
+				                <li class="item-address"><b class="icon common-bg"></b><a target="_blank" href="http://my.poco.cn/tags/tag_search.php?q=%B9%E3%D6%DD&more%5B%5D=3">广州</a></li>
+                				  				  				  <li class="item-trips"><b class="icon common-bg"></b><a href="http://event.poco.cn/event_detail.htx&event_id=65138" target="_blank">POCO月赛：既温暖又美好</a></li>
+				  				  
+
+				 
+				</ul>
+              </div>
+			  </div>
+            </div>
+		<script language='JavaScript' src='http://a-m-s.poco.cn/show/c_78/z_1442/a_0_all.js' ></script>
+            <div class="final-page-txt lh20 color2 f14">
+				<p> <p><span style="font-size: 14px">&#60;外星观光&#62;&nbsp;</span><br style="font-size: 14px"/><span style="font-size: 14px"><br /></span></p><p><span style="font-size: 14px">听说日食过后地球万物灵动，</span></p><p><span style="font-size: 14px">走，</span><span style="font-size: 14px;">我们去看看，</span></p><p><span style="font-size: 14px">新鲜的氧气早已漫在空中，</span></p><p><span style="font-size: 14px">穿透我寸寸肌肤。</span></p><p><br style="font-size: 14px"/><span style="font-size: 14px">出镜：</span><a href="http://weibo.com/n/%E4%BE%AC%E6%9C%ACPassionate?from=feed&amp;loc=at" target="_blank" style="text-decoration: none;font-size: 14px">@侬本Passionate</a><span style="font-size: 14px">&nbsp;</span><a href="http://weibo.com/n/%E5%9C%B0%E7%93%9Cnice?from=feed&amp;loc=at" target="_blank" style="text-decoration: none;font-size: 14px">@地瓜nice</a><span style="font-size: 14px">&nbsp;&nbsp;</span><br style="font-size: 14px"/><span style="font-size: 14px">摄影：</span><a href="http://weibo.com/n/%E5%B0%8F%E9%BB%91Ray_?from=feed&amp;loc=at" target="_blank" style="text-decoration: none;font-size: 14px">@小黑Ray_</a><span style="font-size: 14px">&nbsp;</span></p> </p>
+            </div>			
+            <div id="J_photo_list" class="final-page-imgList mod-link-none hidden_lj_event_link">
+			<textarea id="J_photo_list_textarea" class="datalazyload-area-custom dn"></textarea>			
+            </div>
+			<div id="img_list" class="dn">
+			    <ul class="artList">
+			                  <li>
+                  <div class="num" style="color:#d5d5d5">第1幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_1" data-photo-item-id="215196266" item="215196266" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094701025_640.jpg?1500x638_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094701025.jpg?1500x638_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094701025_640.jpg?1500x638_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">1</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196266" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196266" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094701025_640.jpg?1500x638_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196266" data-photo-item-id="215196266" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  <div class="re" style="z-index:100"><div id="J_item_collect_pop_layer_tips" class="item_collect_pop_layer"><div class="context"><p>如果喜欢这张图片，可以收录起来。</p><p><a href="http://photo.poco.cn/like/" target="_blank">点此看其他人的收录&gt;&gt;&gt;</a></p><a href="javascript:void(0);" class="J_cls_tips_btn cls_btn" onclick="clsItemFavTipsModule();"></a></div><div class="asarrow"></div></div></div>					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+					<div class="re" style="z-index:101" id="lj_event_tip"> <div id="lj_event_box" class="item_collect_pop_layer"><div class="context">闪念，从一张图出发！收录此图与大家分享 <a href="" target="_blank">你的闪念火花&gt;&gt;&gt;</a><a href="javascript:void(0);" class="J_cls_tips_btn cls_btn" onclick="clslj_event_tip();"></a></div><div class="asarrow"></div></div></div>						
+					  </em>
+					<em id="dianping_info_215196266" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196266">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第2幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_2" data-photo-item-id="215196269" item="215196269" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094707096_640.jpg?1500x1500_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094707096.jpg?1500x1500_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094707096_640.jpg?1500x1500_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">2</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196269" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196269" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094707096_640.jpg?1500x1500_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196269" data-photo-item-id="215196269" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196269" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196269">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第3幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_3" data-photo-item-id="215196272" item="215196272" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094714029_640.jpg?1500x887_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094714029.jpg?1500x887_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094714029_640.jpg?1500x887_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">3</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196272" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196272" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094714029_640.jpg?1500x887_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196272" data-photo-item-id="215196272" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196272" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196272">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第4幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_4" data-photo-item-id="215196274" item="215196274" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094721029_640.jpg?1500x1000_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094721029.jpg?1500x1000_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094721029_640.jpg?1500x1000_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">4</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196274" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196274" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094721029_640.jpg?1500x1000_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196274" data-photo-item-id="215196274" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196274" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196274">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第5幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_5" data-photo-item-id="215196275" item="215196275" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094729051_640.jpg?1000x1500_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094729051.jpg?1000x1500_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094729051_640.jpg?1000x1500_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">5</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196275" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196275" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094729051_640.jpg?1000x1500_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196275" data-photo-item-id="215196275" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196275" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196275">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第6幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_6" data-photo-item-id="215196277" item="215196277" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609473607_640.jpg?1500x1000_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609473607.jpg?1500x1000_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609473607_640.jpg?1500x1000_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">6</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196277" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196277" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609473607_640.jpg?1500x1000_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196277" data-photo-item-id="215196277" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196277" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196277">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第7幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_7" data-photo-item-id="215196279" item="215196279" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094743018_640.jpg?1500x1000_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094743018.jpg?1500x1000_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094743018_640.jpg?1500x1000_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">7</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196279" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196279" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094743018_640.jpg?1500x1000_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196279" data-photo-item-id="215196279" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196279" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196279">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第8幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_8" data-photo-item-id="215196282" item="215196282" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094748014_640.jpg?1000x1500_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094748014.jpg?1000x1500_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094748014_640.jpg?1000x1500_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">8</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196282" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196282" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094748014_640.jpg?1000x1500_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196282" data-photo-item-id="215196282" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196282" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196282">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第9幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_9" data-photo-item-id="215196284" item="215196284" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094755028_640.jpg?1500x1000_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094755028.jpg?1500x1000_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094755028_640.jpg?1500x1000_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">9</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196284" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196284" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094755028_640.jpg?1500x1000_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196284" data-photo-item-id="215196284" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196284" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196284">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第10幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_10" data-photo-item-id="215196285" item="215196285" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094802026_640.jpg?1500x1000_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094802026.jpg?1500x1000_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094802026_640.jpg?1500x1000_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">10</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196285" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196285" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094802026_640.jpg?1500x1000_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196285" data-photo-item-id="215196285" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196285" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196285">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第11幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_11" data-photo-item-id="215196286" item="215196286" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094808096_640.jpg?1500x1000_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094808096.jpg?1500x1000_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094808096_640.jpg?1500x1000_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">11</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196286" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196286" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094808096_640.jpg?1500x1000_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196286" data-photo-item-id="215196286" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196286" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196286">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第12幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_12" data-photo-item-id="215196289" item="215196289" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094815058_640.jpg?1500x1000_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094815058.jpg?1500x1000_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094815058_640.jpg?1500x1000_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">12</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196289" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196289" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094815058_640.jpg?1500x1000_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196289" data-photo-item-id="215196289" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196289" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196289">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第13幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_13" data-photo-item-id="215196291" item="215196291" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094823077_640.jpg?1500x1000_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094823077.jpg?1500x1000_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094823077_640.jpg?1500x1000_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">13</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196291" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196291" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094823077_640.jpg?1500x1000_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196291" data-photo-item-id="215196291" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196291" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196291">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第14幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_14" data-photo-item-id="215196295" item="215196295" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094830082_640.jpg?1500x1000_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094830082.jpg?1500x1000_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094830082_640.jpg?1500x1000_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">14</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196295" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196295" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094830082_640.jpg?1500x1000_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196295" data-photo-item-id="215196295" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196295" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196295">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第15幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_15" data-photo-item-id="215196303" item="215196303" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094836069_640.jpg?1500x1000_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094836069.jpg?1500x1000_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094836069_640.jpg?1500x1000_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">15</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196303" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196303" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094836069_640.jpg?1500x1000_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196303" data-photo-item-id="215196303" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196303" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196303">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第16幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_16" data-photo-item-id="215196304" item="215196304" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094845049_640.jpg?1500x1000_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094845049.jpg?1500x1000_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094845049_640.jpg?1500x1000_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">16</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196304" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196304" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094845049_640.jpg?1500x1000_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196304" data-photo-item-id="215196304" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196304" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196304">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第17幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_17" data-photo-item-id="215196305" item="215196305" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094851099_640.jpg?1000x1500_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094851099.jpg?1000x1500_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094851099_640.jpg?1000x1500_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">17</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196305" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196305" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094851099_640.jpg?1000x1500_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196305" data-photo-item-id="215196305" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196305" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196305">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第18幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_18" data-photo-item-id="215196314" item="215196314" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094858099_640.jpg?1500x1000_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094858099.jpg?1500x1000_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094858099_640.jpg?1500x1000_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">18</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196314" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196314" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094858099_640.jpg?1500x1000_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196314" data-photo-item-id="215196314" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196314" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196314">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第19幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_19" data-photo-item-id="215196317" item="215196317" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094908023_640.jpg?1500x630_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094908023.jpg?1500x630_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094908023_640.jpg?1500x630_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">19</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196317" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196317" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094908023_640.jpg?1500x630_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196317" data-photo-item-id="215196317" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196317" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196317">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第20幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_20" data-photo-item-id="215196319" item="215196319" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609491407_640.jpg?1500x1000_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609491407.jpg?1500x1000_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609491407_640.jpg?1500x1000_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">20</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196319" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196319" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609491407_640.jpg?1500x1000_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196319" data-photo-item-id="215196319" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196319" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196319">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第21幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_21" data-photo-item-id="215196321" item="215196321" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609492202_640.jpg?1500x1000_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609492202.jpg?1500x1000_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609492202_640.jpg?1500x1000_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">21</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196321" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196321" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609492202_640.jpg?1500x1000_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196321" data-photo-item-id="215196321" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196321" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196321">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第22幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_22" data-photo-item-id="215196324" item="215196324" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094927020_640.jpg?1000x1500_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094927020.jpg?1000x1500_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094927020_640.jpg?1000x1500_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">22</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196324" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196324" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094927020_640.jpg?1000x1500_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196324" data-photo-item-id="215196324" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196324" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196324">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+                              <li>
+                  <div class="num" style="color:#d5d5d5">第23幅</div>
+                  <div class="img-item">
+                    <div class="img-box photo">                      
+					  <img title="外星观光_23" data-photo-item-id="215196326" item="215196326" role="playLivephoto" src="http://www.poco.cn/css_common/v3/images/img_loading.gif" data-lazyload-img-src="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094935071_640.jpg?1500x638_120" data_org_bimg ="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094935071.jpg?1500x638_120" data_img_small="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094935071_640.jpg?1500x638_120" class="photo-item" onload="if(Sys.ie6)resize_img
+					  (this,994,100000)"/>
+					  					  <div class="exif"><div class="exif_bg"></div><a href="javascript:;" class="exif_toggler" role="exifToggler">Exif</a></div>		
+					                      </div>
+                    <div class="img-Operation pt10 lh20 clearfix">
+                      <div class="img-info color2 fl">23</div>
+                      <div class="Operation-btn-item tr color5 fr">
+					  <em class="item-discuss">
+					  <a href="javascript:void(0);" id="J_cmt_item_handle_215196326" class="cmt_item_handle" onClick="cmt.addPhotoCmt(this);" data-cmt-topic-url="http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051" data-photo-item-id="215196326" data-photo-item-url="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094935071_640.jpg?1500x638_120" data-init-str="" hidefocus="true"><i class="icon common-bg"></i>评论</a>
+					  </em>
+					  <em class="item-like f14" >
+					  <a href="javascript:void(0);" class="collect_handle" id="J_item_collect_handle_215196326" data-photo-item-id="215196326" data-act-id="35980668" data-act-item-id="5049051" data-act-type-id="3" data-owner-id="175296647" hidefocus="true"><i class="icon common-bg"></i><strong></strong></a>
+					  					  </em>
+					  <em id="lj_event_link" class="item-like f14 lj_event_link dn">
+					 <a href="" target="_blank">
+					 <img id="lj_event_menu" src="http://photo.poco.cn/images/share_lj.png" onmouseover="this.src='http://photo.poco.cn/images/share_lj-hover.png'" onmouseout="this.src='http://photo.poco.cn/images/share_lj.png'">
+					 </a>
+											
+					  </em>
+					<em id="dianping_info_215196326" class="item-reguest" style="display:none"><a href="#bottom_md" onclick="bottom_switch(0)"><i class="icon common-review-bg"></i>嘉宾点评（<span id="dianping_count_215196326">18</span>）</a> </em>
+					  </div>
+                    </div>
+                  </div>
+                </li>
+              			  </ul>			 
+			</div>
+			
+			<script>
+				/*宽屏模式替换延迟加载的地址*/
+				/*
+				function clslj_event_tip(){
+					
+					if ($('lj_event_tip'))
+					{
+						$('lj_event_tip').style.display='none';
+						writeCookie('clslj_event_link', 'hidden',8760,'photo.poco.cn','/'); 					
+						
+					}
+					return false;
+
+				}
+				*/
+				var listDiv    = $('J_photo_list');
+				var widescreen = readCookie('widescreen');				
+				if( widescreen == 1 ){
+					
+					var imgList 		= $('img_list').getElementsByTagName('img');
+					var imgListLength	= imgList.length;
+					for( i=0;i<imgListLength;i++ )
+						imgList[i].setAttribute("data-lazyload-img-src",imgList[i].getAttribute("data_org_bimg"));			
+					var img_list_html = $('img_list').innerHTML.replace(/data-lazyload-img-src/g,"data-lazyload-src");
+					$('J_photo_list_textarea').value = img_list_html;
+				
+				}
+				else{
+				
+					var img_list_html = $('img_list').innerHTML.replace(/data-lazyload-img-src/g,"data-lazyload-src");
+					$('J_photo_list_textarea').value = img_list_html;
+					
+				}
+				$('J_content').removeChild($('img_list'));
+				
+				dataLazyload().loadCustomLazyData(listDiv, 'area-data');
+				dataLazyload({
+
+					containers: listDiv,
+					diff:200
+					
+				});
+				/*宽屏模式替换延迟加载的地址*/
+				/*图片tip*/
+				function clsItemFavTipsModule()
+				{
+					if ($('J_item_collect_pop_layer_tips'))
+					{
+						$('J_item_collect_pop_layer_tips').style.display='none';
+						writeCookie('like_img_tips', 'hidden',8760,'photo.poco.cn','/'); 					
+						
+					}
+					return false;
+				}
+				if( readCookie('like_img_tips')=='hidden' ){
+					
+					$('J_item_collect_pop_layer_tips').style.display='none';
+
+				}
+				/*图片tip*/
+				function get_img_dianping_count( act_id ){
+				
+					var par = "act_id="+act_id;
+					new Request.JSON({
+
+							'url'        : './module/get_img_dianping_count.php',
+							'method'     : 'get',
+							'data'       : par,	
+							'evalScripts': true,
+							'onComplete' : function(json_data) {
+							
+								if(json_data){
+									
+										for( i in json_data ){
+										
+											$('dianping_info_'+i).style.display = '';
+											$('dianping_count_'+i).innerHTML    = json_data[i];
+											
+										}
+									
+								}
+
+							}
+						
+						}).send();		
+				
+				}
+				get_img_dianping_count('35980668');
+			</script>
+            <div class="mod-keyword-item  lh20" style="color:#d5d5d5">
+              <p>--------</p>
+			  <p>关键字：<a href="http://my.poco.cn/tags/tag_show_items.htx&tag_name=%C7%E9%D0%F7" target="_blank" class="mr5"><span>情绪</span></a></p>              <p>版权声明：请尊重原创作品，转载时标明文章原始出处及作者信息</p>
+            </div>
+			              <!--分享-->
+              <div class="voteArea re color6 mod-link-none clearfix pb10 tc">              
+              <!--投票-->
+              <div id="J_add_vote" class="vote-btn dis-ib share-common-bg"><span class="btn-l share-common-bg"></span><b class="ico share-common-bg"></b><a href="javascript:void(0);" class="btn_add_vote fl" hidefocus="true">投票</a><span id="J_act_info_vote_count">0</span></div>              
+              <!--查看用户-->
+              <div id="J_view_voter_btm" class="view dis-ib re" style="display:none">
+              <a id="J_view_voter" class="view-link" href="#this">查看投票用户</a>   
+                  <div id="J_view_voter_box" class="pop-view" style="display:none">
+                    <div class="top pop-common"></div>                  
+                    <div class="pop-con clearfix">
+                      <div id="J_view_voter_list" class="txt-item re">
+					  </div>
+                    </div>
+                    <div class="btm"></div>
+                  </div>                  
+                </div><span class="dis-ib">|</span>
+			  <script>
+			  //var cur_login_id = '0'
+			  if( login_id == user_id )
+				 $('J_view_voter_btm').style.display = '';
+				 
+				function emoticon_v2(s, target_obj)
+				{
+					if (!target_obj) target_obj = 'new_cmt_content';
+					
+					var obj = document.getElementById(target_obj);
+					if( $('cmt_content_tip').style.display == '' )
+						$('cmt_content_tip').style.display = 'none'
+					obj.value=obj.value+s + ' ';					
+					if (target_obj=='new_cmt_content') close_face_icon_div();
+					
+				}	 
+			  </script>	
+              <!----------------分享此作品------------------>
+                <div id="J_share_toolbar" class="share_toolbar dis-ib"> 
+                <div href="javascript:void(0);" class="btn_share" hidefocus="true">                
+                <span class="J_show_share_widget share-page pr15 dis-ib" role="showWidget">分享此作品 <span class="hid">(<em class="J_share_count">0</em>)</span></span>                
+                  <div class="share_app dis-ib">
+                  <a class="pocoweibo share-common-bg" href="javascript:void(0);" hidefocus="true" title="分享到POCO窝" role="shareto" data-sign="pocoweibo">分享到POCO窝</a>
+                  <a class="qq share-common-bg" href="javascript:void(0);" hidefocus="true" title="分享到腾讯微博" role="shareto" data-sign="qq">分享到腾讯微博</a>
+                  <a class="weixin share-common-bg" href="javascript:void(0);" hidefocus="true" title="分享到微信" role="shareto" data-sign="weixin">分享到微信</a>
+                  <a class="sina share-common-bg" href="javascript:void(0);" hidefocus="true" title="分享到新浪微博" role="shareto" data-sign="sina">分享到新浪微博</a> 
+                  <a class="qzone share-common-bg" href="javascript:void(0);" hidefocus="true" title="分享到QQ空间" role="shareto" data-sign="qzone">分享到QQ空间</a> 
+                  <a class="renren share-common-bg" href="javascript:void(0);" hidefocus="true" title="分享到人人网" role="shareto" data-sign="renren">分享到人人网</a> 
+                  <a class="wangyi share-common-bg" href="javascript:void(0);" hidefocus="true" title="分享到网易微博" role="shareto" data-sign="netease">分享到网易微博</a>
+                  </div>                 
+                   <a href="javascript:void(0);" class="btn_copy dis-ib" hidefocus="true" role="shareto" data-sign="copy">复制</a>
+                  </div>
+                </div>                                 
+              </div>
+               <!------------分享------------>
+			   </div>
+          <div class="mod-usermore-item mod-link-none clearfix" >
+		  <div class="user-item fl" id="J_user_info">
+			<img src="./images/loading_detail.gif">		  
+		  </div>
+		  <div class="list re fr" id="J_new_act">
+		  <img src="./images/loading_detail.gif">
+		  </div>
+          </div>
+		  <a name="bottom_md" id="bottom_md" > </a>
+          <div class="mod-comment-item mod-link-none" id="_ad_floter_height_as">
+            <div class="tab" id="bottom_mod" name="bottom_mod">
+              <div class="tab-choose color6 tc clearfix">
+                <ul>
+				  <li id="bottom_switch_menu_0"><a href="#this" class="common-bg" onclick="bottom_switch(0)">嘉宾点评</a></li>
+                  <li id="bottom_switch_menu_1"><a href="#this" class="common-bg" onclick="bottom_switch(1)">网友留言</a></li>
+                  <li id="bottom_switch_menu_2"><a href="#this" class="common-bg" onclick="bottom_switch(2)">更多作品</a></li>
+
+                </ul>
+              </div>
+			  <!--嘉宾点评-->
+			 <div id="bottom_switch_box_0" class="tab-con clearfix" style="display:none">
+					<div id="J_dianping_container">
+					<img src="./images/loading_detail.gif">
+					</div>
+                </div>			  
+			  <!--嘉宾点评-->			  
+			  <div id="bottom_switch_box_1" class="tab-con clearfix" style="display:none">
+			    <!--发布留言框-->
+				<form id="cmt_sub_form" name="cmt_sub_form" action=" http://photo.poco.cn/cmt/action/cmt.act.php" method="post">
+				        <div class="mod-discuss-item mod-link-none">
+						                      <div class="mod-textarea re">
+                        <textarea class="lh18 color4" id="new_cmt_content" name="new_cmt_content" title="[可以使用Ctrl+Enter直接提交帖子]" cmt_shading_textarea="1"></textarea>						
+                        <label id="cmt_content_tip" for="new_cmt_content" class="trips color4">尊重作品，说有价值的评论</label>
+						</div>						
+                      <div class="mod-discuss-tool pt15 clearfix">
+                        <div class="Operation-item fl">
+                          <div class="expression-item re fl"> <em class="expression-btn color6"><a href="#this" onclick="open_face_icon_div()"><b class="ico discuss-common-bg fl mr5"></b></a></em>
+                            <div class="pop-expression">                             
+							  <div class="pop-con re" id="cmt_face_icon_div" style="display:none">
+							   <div class="pop-top discuss-common-bg"></div>
+							  <div onclick="emoticon_v2(':huh:');return false;"> <img alt="发呆" src="http://image.poco.cn/emotions/common/huh.gif"></div>
+							  <div onclick="emoticon_v2('B)');return false;"> <img alt="装酷" src="http://image.poco.cn/emotions/common/cool.gif"></div>
+							  <div onclick="emoticon_v2(':o');return false;"> <img alt="吃惊" src="http://image.poco.cn/emotions/common/ohmy.gif"></div>
+							  <div onclick="emoticon_v2(':rolleyes:');return false;"> <img alt="遐想" src="http://image.poco.cn/emotions/common/rolleyes.gif"></div>
+							  <div onclick="emoticon_v2(';)');return false;"> <img alt="抛媚眼" src="http://image.poco.cn/emotions/common/wink.gif"></div>
+							  <div onclick="emoticon_v2('-_-');return false;"> <img alt="睡觉" src="http://image.poco.cn/emotions/common/sleep.gif"></div>
+							  <div onclick="emoticon_v2(':P');return false;"> <img alt="吐舌头" src="http://image.poco.cn/emotions/common/tongue.gif"></div>
+							  <div onclick="emoticon_v2(':)');return false;"> <img alt="微笑" src="http://image.poco.cn/emotions/common/smile.gif"></div>
+							  <div onclick="emoticon_v2(':D');return false;"> <img alt="憨笑" src="http://image.poco.cn/emotions/common/biggrin.gif"></div>
+							  <div onclick="emoticon_v2(':angry:');return false;"> <img alt="愤怒" src="http://image.poco.cn/emotions/common/mad.gif"></div>
+							  <div onclick="emoticon_v2('&lt;_&lt;');return false;"> <img alt="撇嘴" src="http://image.poco.cn/emotions/common/dry.gif"></div>
+							  <div onclick="emoticon_v2(':(');return false;"> <img alt="无奈" src="http://image.poco.cn/emotions/common/sad.gif"></div>
+							  <div onclick="emoticon_v2(':unsure:');return false;"> <img alt="疑惑" src="http://image.poco.cn/emotions/common/unsure.gif"></div>
+							  <div onclick="emoticon_v2(':blink:');return false;"> <img alt="晕" src="http://image.poco.cn/emotions/common/blink.gif"></div>
+							  <div onclick="emoticon_v2(':ph34r:');return false;"> <img alt="震撼" src="http://image.poco.cn/emotions/common/ph34r.gif"></div>
+							  <div onclick="emoticon_v2(':wub:');return false;"> <img alt="喜欢" src="http://image.poco.cn/emotions/common/wub.gif"></div>
+							  <div onclick="emoticon_v2(':wacko:');return false;"> <img alt="狂晕" src="http://image.poco.cn/emotions/common/wacko.gif"></div>
+							  <div onclick="emoticon_v2(':lol:');return false;"> <img alt="大笑" src="http://image.poco.cn/emotions/common/laugh.gif"></div>							   
+							  <a href="#this" onclick="close_face_icon_div();" class="close"><img alt="关闭" src="http://my.poco.cn/cmt/images/cmt_ico_close.gif" align="top"></a>
+							  </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="fr">
+                          <div class="relay-item color6 mr20 fl">
+                            <label class="dn">
+                              <input type="checkbox" name="复选框组1" value="同时转帖到我的微博" id="复选框组1_0"/>
+                              同时转帖到我的微博</label>
+							  
+							  <input name="recommended_opus" type="checkbox" id="recommended_opus" value="1"  />
+							<label for="recommended_opus">推荐此作品</label>
+                            <label class="ml20">
+                              <input type="checkbox" name="add_vote" value="同时投上一票" id="add_vote" class="color6"/>
+                              同时投上一票</label>
+							  
+                          </div>
+						  <a href="#this" id="__cmt_post_btn" class="send-btn fl discuss-common-bg">发送</a>
+                        </div>
+                        <div id="cmt_icon_athow"></div>
+					  </div>
+                    </div>
+				<input name="act" id="act" type="hidden" value="add_photo_cmt" />
+				<input name="photo_item_id"  id="photo_item_id" type="hidden" value="215196269"/>
+				<input name="cmt_topic_url"  id="cmt_topic_url" type="hidden" value="http://photo.poco.cn/lastphoto.htx&id=5049051" />
+				<input name="photo_item_url" id="photo_item_url" type="hidden" value="http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094707096_165.jpg?1500x1500_120" />
+				<input name="feedback_mode"  id="feedback_mode" type="hidden" value="1" />
+				</form>
+				<script>
+				var myConAthow = new iconAthow({
+					
+					'onInsertBefore':function(){
+						
+						
+					
+					},
+					'onInsertAfter':function(){
+						
+						if( $('cmt_content_tip').style.display == '' )
+						$('cmt_content_tip').style.display = 'none';
+					
+					}
+				
+				});
+				if($('new_cmt_content')) {
+				
+					$('cmt_icon_athow').textarea=$('new_cmt_content');
+					myConAthow.addBind($('cmt_icon_athow'));
+					
+				}
+				</script>
+				<!--发布留言框-->
+				<div id="hot_comment">			
+				</div>
+				<div id="_cmt_tag_" 	>
+				<p class="tc">正在加载评论系统...<a href="javascript:void(0);" onclick="fire_load_cmt();">[刷新]</a></p>
+				</div>
+			  </div>
+			  <div id="bottom_switch_box_2" class="tab-con clearfix" style="display:none">
+                <!--更多作品-->
+                <div class="morePageList-item" style=" display:block" id="J_more_act">
+				<img src="./images/loading_detail.gif">
+                </div>			  
+			  </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>	  
+      <div class="col_sub">
+	  <!--摄影技巧教程-->
+	  	  <div class="mod-teach-item mod-link-none pb20">
+        <h3 class="Title f14 color3"><a href="http://photo.poco.cn/jiqiao/jiqiao_list.php?keyword=%C8%CB%CF%F1" target="_blank">人像摄影技巧教程</a></h3>
+        <div class="img-list color2 clearfix">
+        <ul>
+			        	<li class="clearfix pt20"><div class="img-box fl pr10"><a href="http://photo.poco.cn/special_topic/topic_id-21943.html" target="_blank"><img src="http://image17-c.poco.cn/mypoco/myphoto/20160314/19/6492570520160314192251067_120.jpg?300x300_120" width="64" height="64" alt="人像后期进阶教程：加减美学意识体系"></a></div>
+        	<h4 class="title fn fl"><a href="http://photo.poco.cn/special_topic/topic_id-21943.html" target="_blank" title="人像后期进阶教程：加减美学意识体系">人像后期进阶教程：加减美学意识体系</a></h4></li>
+			        	<li class="clearfix pt20"><div class="img-box fl pr10"><a href="http://photo.poco.cn/special_topic/topic_id-21949.html" target="_blank"><img src="http://image17-c.poco.cn/mypoco/myphoto/20160315/16/6492570520160315162955010_120.jpg?959x959_120" width="64" height="64" alt="这张照片怎么拍？POCO首页作品分析VOL.84"></a></div>
+        	<h4 class="title fn fl"><a href="http://photo.poco.cn/special_topic/topic_id-21949.html" target="_blank" title="这张照片怎么拍？POCO首页作品分析VOL.84">这张照片怎么拍？POCO首页作品分析VOL.84</a></h4></li>
+			        	<li class="clearfix pt20"><div class="img-box fl pr10"><a href="http://photo.poco.cn/special_topic/topic_id-21937.html" target="_blank"><img src="http://image17-c.poco.cn/mypoco/myphoto/20160314/16/17853658720160314164434034_120.jpg?165x165_120" width="64" height="64" alt="干货分享 超全的成都摄影场地合集"></a></div>
+        	<h4 class="title fn fl"><a href="http://photo.poco.cn/special_topic/topic_id-21937.html" target="_blank" title="干货分享 超全的成都摄影场地合集">干货分享 超全的成都摄影场地合集</a></h4></li>
+				
+         </ul>
+        </div>
+		        <div class="list color2 clearfix">
+        <ul>  
+			            <li><a href="http://photo.poco.cn/special_topic/topic_id-21926.html" target="_blank" title="超详解！商业人像专业级后期精修思路【附PSD】">超详解！商业人像专业级后期精修思</a></li>
+			            <li><a href="http://photo.poco.cn/special_topic/topic_id-21928.html" target="_blank" title="想拍好古风人像 必须知道的几大要点">想拍好古风人像 必须知道的几大要点</a></li>
+			            <li><a href="http://photo.poco.cn/special_topic/topic_id-21913.html" target="_blank" title="十招教你拍出完美的头部特写照">十招教你拍出完美的头部特写照</a></li>
+			            <li><a href="http://photo.poco.cn/special_topic/topic_id-21905.html" target="_blank" title="POCO摄影潜力达人榜 第二十期">POCO摄影潜力达人榜 第二十期</a></li>
+			            <li><a href="http://photo.poco.cn/special_topic/topic_id-21879.html" target="_blank" title="阴雨天也不怕 清新日系灰调拯救你【附LR预设】">阴雨天也不怕 清新日系灰调拯救你【</a></li>
+			            <li><a href="http://photo.poco.cn/special_topic/topic_id-21869.html" target="_blank" title="想成为摄影助理 你首先要具备这些条件">想成为摄影助理 你首先要具备这些条</a></li>
+			            <li><a href="http://photo.poco.cn/special_topic/topic_id-21872.html" target="_blank" title="摄影提升期 如何挑选适合自己的镜头？">摄影提升期 如何挑选适合自己的镜头</a></li>
+				
+        </ul>
+        </div>
+			
+        </div>
+	  	  	<div class="mod-teach-item mod-link-none pb20">
+	    <h3 class="Title f14 color3"><a href="http://photo.poco.cn/jiqiao/jiqiao_list-upi-topic_channel_type-%CA%D3%BE%F5%C2%FE%D3%CE-order_by-add_time.html" target="_blank">摄影视觉欣赏</a></h3>
+        <div class="img-list color2 clearfix">
+		
+        <ul>
+		   <li class="clearfix pt20"><div class="img-box fl pr10"><a href="http://photo.poco.cn/special_topic/topic_id-21939.html" target="_blank"><img src="http://image17-c.poco.cn/mypoco/myphoto/20160314/17/6163280320160314173700091_120.jpg?500x500_120" width="64" height="64" alt="摄影师Bharat Sikka的异时空元素的结合与冲突时尚风格"></a></div>
+        	<h4 class="title fn fl"><a href="http://photo.poco.cn/special_topic/topic_id-21939.html" target="_blank" title="摄影师Bharat Sikka的异时空元素的结合与冲突时尚风格">摄影师Bharat Sikka的异时空元素的结合与冲突时尚风格</a></h4></li>
+		</ul>
+		
+		</div>
+		        <div class="list color2 clearfix">
+        <ul>  
+												            <li><a href="http://photo.poco.cn/special_topic/topic_id-21940.html" target="_blank" title="Simone Favilli：他为人体艺术添加名为情色的蒙版">Simone Favilli：他为人体艺术添加</a></li>
+									            <li><a href="http://photo.poco.cn/special_topic/topic_id-21918.html" target="_blank" title="张扬的悲喜：新西兰乡村的童年剪影">张扬的悲喜：新西兰乡村的童年剪影</a></li>
+									            <li><a href="http://photo.poco.cn/special_topic/topic_id-21923.html" target="_blank" title="夫妻致力环境研究20年 以戏剧化的手段揭示残酷现实">夫妻致力环境研究20年 以戏剧化的手</a></li>
+									            <li><a href="http://photo.poco.cn/special_topic/topic_id-21893.html" target="_blank" title="美如画般的黑暗纪实 还原大屠杀前犹太人家庭平凡日常">美如画般的黑暗纪实 还原大屠杀前犹</a></li>
+							
+        </ul>
+        </div>
+			
+	</div>
+		
+	  <!--人像摄影技巧教程-->
+        <div class="mod-notice-item mod-link-none pb20" id="J_ads_contr_ad_z_1443_box">
+          <h3 class="Title f14 color3">公告栏</h3>
+          <div class="list color2">
+            <ul id="J_ads_contr_ad_z_1443">
+            </ul>
+          </div>
+        </div>
+        <div>
+		<script src="http://photo.poco.cn/js/lastphoto_photo_admin.js.php?pid=5049051&user_id=175296647&club_id=0"></script>		
+		</div>        
+        <div class="mod-hotpoint-item" id="J_ads_contr_ad_z_1444_box">
+          <h3 class="Title pb15 f14 color3">近期热点</h3>
+          <div class="list" id="J_ads_contr_ad_z_1444">
+          </div>
+        </div>
+
+		<!-- 摄影频道v2:作品页/擎天柱[205x600] 开始 -->
+		<div class="mod-prize-item" id="J_ads_contr_ad_z_1445_box">
+		  <div class="banner" id="J_ads_contr_ad_z_1445">
+		  </div>
+
+
+		</div>
+        <!-- 摄影频道v2:作品页/擎天柱[205x600] 结束 --> 
+  <!-- 摄影频道 ： 作品页/二屏/浮动式擎天柱二[205x580] 开始 -->
+<script language='JavaScript' src='http://a-m-s.poco.cn/show/c_78/z_2768/a_0_all.js' ></script>
+<!-- 摄影频道 ： 作品页/二屏/浮动式擎天柱二[205x580] 结束 -->
+        <div class="mod-prize-item" id="J_ads_contr_ad_z_1446_box">
+          <h3 class="Title pb15 Title f14 color3">近期大奖活动</h3>
+          <div class="banner" id="J_ads_contr_ad_z_1446">
+		  </div>
+        </div>
+		<a href="http://phone.poco.cn/app/photoskill/" target="_blank" style="text-decoration:none;">
+	   <div class="scan-content">
+		<div class="scan-icon clearfix">
+		<div class="fldi icon-55x55"><img src="http://photo.poco.cn/images/icon-55x55.jpg" /></div>
+		<p class="fldi ml5 fn_wryh des-box lh20 pt5 f14">POCO摄影技巧APP让作品更加精湛！</p>
+		</div>
+		<div class="scan-img tc">
+			<div class="scan-160x160"><img src="http://photo.poco.cn/images/scan-160x160.jpg" /></div>
+			<p class="scan-text pt10">扫一扫<span class="scan-link">或点击进入官网下载</span></p>
+		</div>
+		</div>
+		</a>
+      </div>
+    </div>
+	
+    <div class="mod-tip-item mod-link-none re">
+      <div class="tip-txt color4"><b class="tip-icon common-bg" id="J_channel_rss"></b><span class="pl15 pr15">|</span>	  
+	  <a class="report_act" href="http://my.poco.cn/act/act_report.php?act_id=35980668&user_id=175296647&url=http%3A//photo.poco.cn/lastphoto-htx-id-5049051-p-0.xhtml" target="_blank" hidefocus="true">举报不良信息</a><span class="pl20 pr20">|</span> 按键盘←看作者的上一组作品，按键盘→键看作者的下一组作品</div>
+      <div id="J_channel_rss_pop" class="pop-tip color5 dn">
+        <div class="top"></div>
+        <div class="pop-con clearfix">
+		<a href="javascript:void(0);" id="J_channel_subscribe_handle" hidefocus="true">订阅摄影社区</a><span class="pl20 pr20">|</span><a href="http://my.poco.cn/rss_gen/mypoco_rss.php?user_id=175296647" id="J_act_subscribe_handle" class="" onclick="return false;" hidefocus="true">订阅TA的作品</a>
+		</div>
+        <div class="btm"></div>
+      </div>
+    </div>
+    <div class="banner pt20">
+	<!-- 摄影频道v2 ： 作品页/底部/大通栏[994x90] 开始 -->
+    <iframe id="ams_iframe_2390" name="ams_iframe_2390" src=" http://a-m-s.poco.cn/html/c_78/z_2390/a_0_all.html" width="994" height="90" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" ></iframe>
+	<!-- 摄影频道v2 ： 作品页/底部/大通栏[994x90] 结束 -->
+	</div>
+  </div>
+</div>
+<!--工具条-->
+<div class="tool-top-bar">
+<div class="btn-item btn-item-first"><a href="#this" id="J_weixin_btn" class="icon-area" onmouseover="$(J_weixin_codeimg).style.display='block';" onmouseout="$(J_weixin_codeimg).style.display='none';"><i class="code-icon icon common-toolbar-bg"></i></a>
+     <div class="code-pop clearfix" id="J_weixin_codeimg" style="display:none">
+        <div class="code-pop-con">
+         <div class="img"><img src="http://qr.liantu.com/api.php?text=http%3A%2F%2Fphoto.poco.cn%2Flastphoto-htx-id-5049051-p-0.xhtml&w=174&m=0" /></div>
+         <p>微信扫一扫，分享作品</p>
+        </div>
+        <i class="point-icon"></i>
+     </div>
+</div>
+<div class="btn-item"><a href="#this" id="J_pre_item_li" class="icon-area"><i class="prve-icon none-prve-icon icon common-toolbar-bg"></i></a></div>
+<div class="btn-item"><a href="#this" id="J_next_item_li" class="icon-area"><i class="next-icon none-next-icon icon common-toolbar-bg"></i></a></div>
+<div class="btn-item"><a href="redirect_random_opus_link.php?genus_id=0" class="icon-area" title="挖掘精彩作品"><i class="casual-icon icon common-toolbar-bg"></i></a></div>
+<div class="btn-item btn-item-last"><a href="#" class="icon-area"><i class="top-icon icon common-toolbar-bg"></i></a></div>
+</div>
+<!--工具条 end-->
+
+<script language="JavaScript">
+var tj_query = "gid=0";
+</script>
+<!-- 公共尾部 开始 -->
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//my.poco.cn/rss_gen/poco_rss_channel.photo.php?sub_icon=figure,scenery,ecology,record,lomo,idea,commerce,makeup,box,pet,auto,sport,photo_skill,night_scenery"><!-- new log start -->
+<script type="text/javascript">__poco_site_stat_request_filename = 'poco_tj.css';</script>
+<script type="text/javascript" src="//www1.poco.cn/site_stat_code.js"></script>
+<!-- new log end; -->
+
+<link rel="stylesheet" type="text/css" charset="utf-8" href="//wwwcdn.poco.cn/css_common/v3/global/footer.css?201401251207">
+<div id="J-global-footer" class="global-footer">
+    <div class="footer-search-item footer-bg">
+        <div class="search-warp"> <i class="top-icon footer-bg"><a href="javascript:;" title="返回顶部" role="scroll-to-top"></a></i>
+            <form id="J-global-footer-search-form" method="get" action="//my.poco.cn/tags/tag_search.php" target="_blank">
+            <input id="J-global-footer-search-type" type="hidden" name="ts_ids" value="">
+            <div class="search-triggers">
+                <ul class="search-nav-item clearfix">
+                    <li><a href="javascript:;" role="search-tab" class="active" data-search-id="">图片</a></li>
+                    <li><a href="javascript:;" role="search-tab" data-search-id="1">博客</a></li>
+                    <li><a href="javascript:;" role="search-tab" data-search-id="3">摄影</a></li>
+                    <li><a href="javascript:;" role="search-tab" data-search-id="7">美食</a></li>
+                    <li><a href="javascript:;" role="search-tab" data-search-id="44">旅游</a></li>
+                    <li><a href="javascript:;" role="search-tab" data-search-id="104">宠物</a></li>
+                    <li><a href="javascript:;" role="search-tab" data-search-id="8">人</a></li>
+                    <li><a href="javascript:;" role="search-tab" data-search-id="movie">电影</a></li>
+                </ul>
+            </div>
+            <div class="search-input-item">
+                <input class="search-key" type="text" name="q">
+                <button type="submit" class="btn footer-bg">搜 索</button>
+            </div>
+                </form>
+            <div class="search-hots"></div>
+        </div>
+    </div>
+
+
+    <div class="footer-message-item">
+            <div class="sitemap clearfix">
+                <div class="sitemap-item about-item"> <strong>关于POCO</strong>
+                    <div class="text-info"> <a rel="nofollow" href="//www.pocosite.com/about/" target="_blank">公司简介</a> <a rel="nofollow" href="//www.pocosite.com/about/contact.php" target="_blank">合作联系</a> <a rel="nofollow" href="//www.pocosite.com/about/cooperation.php" target="_blank">广告服务</a> <a rel="nofollow" class="join_us fb" href="//www.pocosite.com/job/" target="_blank">加入POCO团队</a></div>
+                </div>
+                <div class="sitemap-item help-item"> <strong>帮助 & 服务</strong>
+                    <div class="text-info"> <a rel="nofollow" href="//help.poco.cn/" target="_blank">帮助中心</a> <a rel="nofollow" href="//account.poco.cn/" target="_blank">服务中心</a> <a rel="nofollow" href="//www.pocosite.com/company/terms.php" target="_blank">使用条款</a> <a rel="nofollow" href="//bbs.poco.cn/forum.htx&amp;fid=2#c1" target="_blank">意见反馈</a> <a rel="nofollow" href="//bbs.poco.cn/forum.htx&amp;fid=1#c1" target="_blank">技术支持</a> <a rel="nofollow" href="//www.pocosite.com/company/download.php" target="_blank">软件下载</a></div>
+                </div>
+                <div class="sitemap-item card-item"> <strong>POCO卡</strong>
+                    <div class="card-info"><i class="card-icon footer-common-bg"><a href="//card.poco.cn/" target="_blank">POCO CARD</a></i>
+                        <p class="txt-item">POCO会员卡，持卡用户可在全国POCO加盟商户消费时享受折扣优惠。</p>
+                    </div>
+                </div>
+                <div class="sitemap-item kachabank-item"> <strong>商业合作</strong> 
+					<div class="text-info">
+					<a href="//www.yueus.com/" target="_blank">约约模特</a></div> 
+				</div>
+                <div class="sitemap-item code-item">
+                    <div class="code-info clearfix"> <i class="card-icon footer-common-bg"></i>
+                        <p class="txt-item">扫描或输入<br />
+                            <span class="en-text">M.POCO.CN</span><br />
+                            <span class="trips">即可打开手机版</span></p>
+                    </div>
+                </div>
+            </div>
+            <p class="clearfix"><span class="fl">内容合作、出版发行合作联系方式：020-87396965 <a target="_blank" href="//bbs0.poco.cn/topic.php?fid=8&amp;tid=6148259&amp;p=1&amp;no_menu=1" rel="nofollow">不良信息举报</a>&#12288;<a target="_blank" href="//bbs.poco.cn/forum.htx&amp;fid=1" rel="nofollow">客户服务</a></span><span class="fr"><a target="_blank" href="//www.miibeian.gov.cn/" rel="nofollow">备案号：粤B2-20030218号-2</a> <a target="_blank" href="//www.pocosite.com/company/certificate.php" rel="nofollow">ICP证号：粤B2-20030218</a> Copyright<span style="font-family: Arial;">&copy;</span> 2003-2016 POCO CO.,LTD.</span></p>
+        <p class="clearfix"><span class="fl">广告投放联系方式：<a target="_blank" href="//www.cav-ad.com/" rel="nofollow"><img align="absmiddle" src="//www.poco.cn/css_common/v3/images/cav.gif"></a>华东：021-32528390  华南：020-87396965  华北：010－65528781</span>
+            
+			 　<a target="_blank" href="//www.idc2.com.cn" class="fr" rel="nofollow">远景数据中心提供网络带宽</a> 
+			 <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010402000060" class="fr" rel="nofollow"><img src="http://www.beian.gov.cn/file/ghs.png" class="fr">粤公网安备 44010402000060号</a> 
+			 
+			 </p>
+    </div>
+</div>
+<script type="text/javascript">
+seajs.use(['poco/global/footer'], function(Footer) {
+    Footer.init('photo');
+});
+</script>
+<link rel="stylesheet" type="text/css" href="//a-m-s.poco.cn/css/all_channel_pop_frame.css" />
+
+
+
+<!--<script type="text/javascript" src="//img1-c.poco.cn/js/lib/poco_fresh_pop_frame.js"></script>-->
+<!--<script type="text/javascript">
+    (function(window, undefined){
+var document = window.document;
+	var temp_arr = document.domain.split('.'),
+		site_domain = temp_arr[parseInt(temp_arr.length)-3],
+		page_url = window.location.href.replace(/#(.*)/gi,""),
+		is_index = 0;
+		
+	if (page_url == 'http://' + document.domain + '/' || page_url.indexOf('index') > 0) is_index = 1;
+	poco_fresh_pop_frame({
+		url:'http://' + document.domain + '/module_common/fresh/poco_fresh.php?p=0&site=' + site_domain + '&is_index=' + is_index
+	});
+})(window);
+
+//(function(d,f){var e=d.document;var b,a,c;if((a=String(e.cookie).match(new RegExp("(?:^| )__display_pocowo_community_promote_tips(?:(?:=([^;]*))|;|$)")))){b=a[1]?decodeURIComponent(a[1]):""}if(!b){c=e.createElement("script");c.src="//www.poco.cn/qing/assets/js/promote/community.js";e.getElementsByTagName("head")[0].appendChild(c)}})(window);
+//(function(e,t){var n=e.document,r="J_collect2woScript",i=n.getElementById(r);i||(i=n.createElement("script"),i.id=r,i.src="//www.poco.cn/qing/assets/js/tools/community-tools.js",n.getElementsByTagName("head")[0].appendChild(i))})(window);
+</script>-->
+
+
+<script>
+(function(window) {
+    function readCookie(name) {
+        var ret, matchArr;
+        if ((matchArr = String(window.document.cookie).match(
+            new RegExp('(?:^| )' + name + '(?:(?:=([^;]*))|;|$)')))) {
+            if (matchArr[1]) {
+                ret = matchArr[1];
+            }
+        }
+        return ret;
+    }
+
+    if (typeof MooTools != 'undefined')
+    {
+        var __top_fav_tips=readCookie('top_fav_tips');
+        var __display_pocowo_community_promote_tips=readCookie('__display_pocowo_community_promote_tips');
+        function __top_slide_fav(div_id,direction)
+        {
+            var per=4;
+            var total_height=40;
+            if(direction=='up') writeCookie('top_fav_tips', '1', 31536000, 'poco.cn')
+            void function(){
+                var slide_time=setInterval(function(){
+                    var div_height= $(div_id).style.height;
+                    var height=parseInt(div_height.replace("px",''));
+                    if(direction=="up")
+                    {
+                        if(height>0)$(div_id).style.height=(height-4)+"px";
+                        else   clearInterval(slide_time);
+                    }
+                    else
+                    {
+                        if(height<total_height) $(div_id).style.height=(height+4)+"px";
+                        else clearInterval(slide_time);
+                    }
+                },50);
+            }()
+        }
+        if(__top_fav_tips!=1 && 'hiden'==__display_pocowo_community_promote_tips)
+        {
+            var slide_html='<div id="__top_fav_tips" style="background:url(http://www.poco.cn/module_common/footer_v3/repeat-x.jpg) repeat-x;"><div style="height: 40px; overflow: hidden; background:url(http://www.poco.cn/module_common/footer_v3/new-1920-39.jpg) no-repeat center 0 "><div style="height:40px;line-height:40px;margin:0 auto;width:994px;"><div><div>      <div style="width:713px;text-indent:-9999px;float:left;">手机上poco</div></div><a title="关闭" href="#this" onclick=__top_slide_fav("__top_fav_tips","up") style="background:url(http://www.poco.cn/module_common/footer_v3/close-19-19.png) 0 1px no-repeat;display: block;float: right;height: 19px; margin: 10px 0 0 11px;text-indent: -9999em;width: 19px;margin-right:20px;">close</a><a href="#this" onclick=__top_slide_fav("__top_fav_tips","up"); style="float:right;color:#737373;">不再提示</a></div></div></div></div>';
+
+            if(!$('__top_fav_tips'))
+            {
+                var new_obj_div=new Element('div',{'id':'__top_fav_tips'});
+                new_obj_div.injectTop(document.body);
+                new_obj_div.setStyle("height","0px");
+                new_obj_div.setStyle("overflow","hidden");
+                $('__top_fav_tips').innerHTML=slide_html;
+            }
+            window.addEvent('domready', function() {__top_slide_fav("__top_fav_tips",'down');});
+        }
+    }
+})(window);
+</script>
+<script language='JavaScript' src='http://a-m-s.poco.cn/show/encode_area/photo_channel.js' ></script>
+<!-- 公共尾部 结束 -->
+
+<script type="tpl" id="J_user_info_tpl">
+<div class="clearfix">
+	<div class="img-item fl"><a href="{{user_space_link}}" target="_blank"><img src="{{user_icon}}"onload="if(Sys.ie6)resize_img(this,80,80)"/></a></div> 
+	<dl class="txt-item fl">
+	  <dt id="J_user_name" class="title fn_wryh"><a href="{{user_space_link}}" target="_blank">{{user_name}}</a>{{{verified_info_html}}}</dt>
+	  <dd class="info color6"> <a href="http://my.poco.cn/credit_store/help_2.php#1" target="_blank">{{user_credit}}</a>
+		  {{#club_name}}
+			  [<a href="{{club_link}}" target="_blank">{{club_name}}</a>]
+		  {{/club_name}} 
+		</dd>
+	  <dd class="btn">
+	  <span id="attention_box_{{user_id}}">
+
+      {{^is_follow}} 
+      <a href="javascript:;" id="J_user_info_relation_button" class="add-btn common-bg" style="display:block" data-user-id="{{user_id}}" data-user-nickname="{{user_name}}" data-action-type="follow"><span class="common-bg"><em class="ico common-bg"></em>关注</span></a>
+      {{/is_follow}}
+
+    {{#is_follow}}
+      <a href="javascript:;" id="J_user_info_relation_button" class="add-btn already-btn common-bg" style="display:block" data-user-id="{{user_id}}" data-user-nickname="{{user_name}}" data-action-type="unfollow">
+            <span class="common-bg button-text">
+                <em class="ico common-bg"></em>已关注
+            </span>
+            <span class="common-bg button-text-hover">取消关注</span>
+      </a>
+      {{/is_follow}}
+
+	  </span>
+	  <a href="http://my.poco.cn/pm/pm_send.php?to_id={{user_id}}" class="send-btn common-bg"><span class="common-bg">发悄悄话</span></a></dd>
+	</dl>
+  </div>
+  <div class="user-status-item color2 clearfix">
+	<ul>	
+	  <li class="item-page">
+		<dl>
+		  <dt class="fn_ta">{{all_act_count}}</dt>
+		  <dd>作品</dd>
+		</dl>
+	  </li>	  
+	  <li class="item-concerned tc border-color2">
+		<dl>
+		  <dt class="fn_ta">{{follow_total}}</dt>
+		  <dd>被关注</dd>
+		</dl>
+	  </li>
+	  <li class="item-view tc">
+		<dl>
+		  <dt class="fn_ta">{{visit_total}}</dt>
+		  <dd>访问量</dd>
+		</dl>
+	  </li>
+	</ul>
+</div>
+</script>
+<script type="tpl" id="J_new_act_tpl">
+  <ul>
+    {{#user_new_acts}} 
+	<li class="re">
+	  <div class="img-item"><a href="{{click_url}}" title="{{item_title}}"><img style="max-width:145px" src="{{img_url_145}}" alt="" onerror="onerror_for_fix_thumb(0,'{{img_url}}', 145, '{{img_url_165}}',this)"/></a></div>
+	  <h4 class="title fn"><a href="{{click_url}}" class="bg-opacity2 white" title="{{item_title}}">{{short_item_title}}</a></h4>
+	</li>
+  {{/user_new_acts}} 	
+  </ul>
+</script>
+<script type="tpl" id="J_more_act_tpl">
+<div class="mod-txtimg230-list">
+<ul class="clearfix">
+{{#commend_plus}} 
+<li>
+<div class="img-box"><a target="_blank" href="{{link_url}}" title="{{title}}"><img src="{{img_url}}" width="230" height="230" onerror="onerror_for_fix_thumb(0,'{{org_img_url}}', 145, '{{img_url_640}}',this)"/></a></div>
+<div class="txt-box">
+  <h4 class="color7"><a href="{{link_url}}" ><span class="mr20 f14 color5" title="{{title}}">{{short_title}}</span></a></h4>
+</div>
+ </li>
+  {{/commend_plus}} 
+</ul>
+</div>
+<div class="more-btn tc color5 border-color2 lh18"><a href="http://photo.poco.cn/vision.htx&gid=0" target="_blank">查看更多人像摄影作品<em class="ico common-bg ml5"></em></a></div>
+</script>
+
+<div id="J_ams_hiden_load_ad_z_1443" class="dn"><script src='http://a-m-s.poco.cn/show/c_78/z_1443/a_0_all.js'></script></div>
+<div id="J_ams_hiden_load_ad_z_1444" class="dn"><script src='http://a-m-s.poco.cn/show/c_78/z_1444/a_0_all.js'></script></div>
+<div id="J_ams_hiden_load_ad_z_1445" class="dn"><script src='http://a-m-s.poco.cn/show/c_78/z_1445/a_0_all.js'></script></div>
+<div id="J_ams_hiden_load_ad_z_1446" class="dn"><script src='http://a-m-s.poco.cn/show/c_78/z_1446/a_0_all.js'></script></div>
+
+<script language="JavaScript" src="./js/lastphoto_exif.js?x"></script>
+
+
+
+<style type="text/css">
+#J_user_info .already-btn {
+    width: 68px;
+}
+.mod-usermore-item .add-btn .ico {
+    margin-right: 0;
+}
+#J_user_info_relation_button .button-text-hover{
+    display: none;
+}
+
+#J_user_info_relation_button:hover .button-text{
+    display: none;
+}
+#J_user_info_relation_button:hover .button-text-hover{
+    display: inline;
+}
+</style>
+
+<script>
+getScript('/cmt/?url=http%3A%2F%2Fphoto.poco.cn%2Flastphoto.htx%26id%3D5049051&title=%CD%E2%D0%C7%B9%DB%B9%E2&author_id=175296647&author_name=%D0%A1%BA%DARay&tpl_name=channel_v2&hidden=0&hide_reply_box=0&limit=0,10&no_cmt_def_row_bgcolor=1&quick_login=0&hide_reply_box=1',{'callback':function(){}}); 
+
+
+getScript('http://my.poco.cn/award/award_js_show_act_ih.htx&act_id=35980668&show_type=last_act_info_only_img&output=js&v2');									
+//获取用户勋章
+actBase.init({
+	
+	actInfo:{
+	
+		title:'外星观光',
+		userId:175296647,
+		nickName:'小黑Ray',
+		actId:35980668,
+		actTypeId:3,
+		actItemId:5049051,
+		photoData:[{ photoItemId:215196266, photoTitle:'1',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094701025.jpg?1500x638_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094701025_640.jpg?1500x638_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094701025_165.jpg?1500x638_120'},{ photoItemId:215196269, photoTitle:'2',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094707096.jpg?1500x1500_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094707096_640.jpg?1500x1500_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094707096_165.jpg?1500x1500_120'},{ photoItemId:215196272, photoTitle:'3',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094714029.jpg?1500x887_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094714029_640.jpg?1500x887_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094714029_165.jpg?1500x887_120'},{ photoItemId:215196274, photoTitle:'4',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094721029.jpg?1500x1000_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094721029_640.jpg?1500x1000_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094721029_165.jpg?1500x1000_120'},{ photoItemId:215196275, photoTitle:'5',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094729051.jpg?1000x1500_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094729051_640.jpg?1000x1500_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094729051_165.jpg?1000x1500_120'},{ photoItemId:215196277, photoTitle:'6',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609473607.jpg?1500x1000_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609473607_640.jpg?1500x1000_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609473607_165.jpg?1500x1000_120'},{ photoItemId:215196279, photoTitle:'7',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094743018.jpg?1500x1000_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094743018_640.jpg?1500x1000_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094743018_165.jpg?1500x1000_120'},{ photoItemId:215196282, photoTitle:'8',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094748014.jpg?1000x1500_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094748014_640.jpg?1000x1500_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094748014_165.jpg?1000x1500_120'},{ photoItemId:215196284, photoTitle:'9',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094755028.jpg?1500x1000_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094755028_640.jpg?1500x1000_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094755028_165.jpg?1500x1000_120'},{ photoItemId:215196285, photoTitle:'10',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094802026.jpg?1500x1000_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094802026_640.jpg?1500x1000_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094802026_165.jpg?1500x1000_120'},{ photoItemId:215196286, photoTitle:'11',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094808096.jpg?1500x1000_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094808096_640.jpg?1500x1000_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094808096_165.jpg?1500x1000_120'},{ photoItemId:215196289, photoTitle:'12',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094815058.jpg?1500x1000_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094815058_640.jpg?1500x1000_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094815058_165.jpg?1500x1000_120'},{ photoItemId:215196291, photoTitle:'13',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094823077.jpg?1500x1000_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094823077_640.jpg?1500x1000_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094823077_165.jpg?1500x1000_120'},{ photoItemId:215196295, photoTitle:'14',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094830082.jpg?1500x1000_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094830082_640.jpg?1500x1000_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094830082_165.jpg?1500x1000_120'},{ photoItemId:215196303, photoTitle:'15',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094836069.jpg?1500x1000_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094836069_640.jpg?1500x1000_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094836069_165.jpg?1500x1000_120'},{ photoItemId:215196304, photoTitle:'16',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094845049.jpg?1500x1000_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094845049_640.jpg?1500x1000_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094845049_165.jpg?1500x1000_120'},{ photoItemId:215196305, photoTitle:'17',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094851099.jpg?1000x1500_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094851099_640.jpg?1000x1500_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094851099_165.jpg?1000x1500_120'},{ photoItemId:215196314, photoTitle:'18',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094858099.jpg?1500x1000_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094858099_640.jpg?1500x1000_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094858099_165.jpg?1500x1000_120'},{ photoItemId:215196317, photoTitle:'19',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094908023.jpg?1500x630_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094908023_640.jpg?1500x630_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094908023_165.jpg?1500x630_120'},{ photoItemId:215196319, photoTitle:'20',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609491407.jpg?1500x1000_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609491407_640.jpg?1500x1000_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609491407_165.jpg?1500x1000_120'},{ photoItemId:215196321, photoTitle:'21',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609492202.jpg?1500x1000_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609492202_640.jpg?1500x1000_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/1752966472016031609492202_165.jpg?1500x1000_120'},{ photoItemId:215196324, photoTitle:'22',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094927020.jpg?1000x1500_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094927020_640.jpg?1000x1500_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094927020_165.jpg?1000x1500_120'},{ photoItemId:215196326, photoTitle:'23',originPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094935071.jpg?1500x638_120',bigPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094935071_640.jpg?1500x638_120',smallPhoto:'http://image17-c.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094935071_165.jpg?1500x638_120'}]
+
+	}
+	
+}); 
+
+function bottom_switch(index){
+
+	set_tab_style('bottom_switch_menu_','bottom_switch_box_',index,'current',3);
+
+}
+
+function get_new_act(user_id,new_act_num){
+	
+	new Request.JSON({
+
+		'url'        : './module/lastphoto_bottom_act.js.php',
+		'method'     : 'get',
+		'data'       : 'act=new_act&user_id='+user_id+'&new_act_num='+new_act_num,	
+		'evalScripts': true,
+		'onComplete' : function(json) {
+		
+			var template  	= $('J_new_act_tpl').innerHTML;
+			var html	    = Mustache.to_html(template,json);			
+			$('J_new_act').innerHTML = html;
+			var newActLi 	= $('J_new_act').getElementsByTagName('li');
+			newActLiLength  = newActLi.length;
+			newActLi[newActLiLength-1].className = "re hid";
+
+		}
+		
+	}).send();
+
+}
+
+function get_more_act(genus,type,more_act_num){
+
+	new Request.JSON({
+
+		'url'        : './module/lastphoto_bottom_act.js.php',
+		'method'     : 'get',
+		'data'       : 'act=more_act&type='+type+'&genus='+genus+'&more_act_num='+more_act_num,	
+		'evalScripts': true,
+		'onComplete' : function(json) {
+
+			var template  	 = $('J_more_act_tpl').innerHTML;
+			var html	  	 = Mustache.to_html(template,json);	
+			$('J_more_act').innerHTML = html;
+			var moreActLi 	 = $('J_more_act').getElementsByTagName("li");
+			moreActLiLength  = moreActLi.length;
+			moreActLi[moreActLiLength-1].className = 'hid';
+			moreActLi[moreActLiLength-2].className = 'hid';	
+			
+		}	
+	}).send();
+
+}
+
+window.addEvent('domready', function() {
+
+	var win = window, actInfo = actBase.actInfo;
+	var amsCfg = [
+	
+		{ type:'js', id:'ad_z_1443', src:'http://a-m-s.poco.cn/show/c_78/z_1443/a_0_all.js'},
+		{ type:'js', id:'ad_z_1444', src:'http://a-m-s.poco.cn/show/c_78/z_1444/a_0_all.js'},
+		{ type:'js', id:'ad_z_1446', src:'http://a-m-s.poco.cn/show/c_78/z_1446/a_0_all.js'},
+		{ type:'js', id:'ad_z_1445', src:'http://a-m-s.poco.cn/show/c_78/z_1445/a_0_all.js'}
+		
+	];
+	for (var amI = 0, adLen = amsCfg.length; amI < adLen; amI++)
+	{
+		tmpCfg = amsCfg[amI];
+		if (tmpCfg.type === 'iframe')
+		{
+			$(tmpCfg.id).innerHTML = '<iframe id="ams_iframe_' + tmpCfg.id + '" name="ams_iframe_' + tmpCfg.id + '" width="' + tmpCfg.width + '" height="' + tmpCfg.height + '" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" src="' + tmpCfg.src + '"></iframe>';
+		}
+		else if (tmpCfg.type === 'js')
+		{	
+			re = /^\s*/g;
+			var html = $('J_ams_hiden_load_' + tmpCfg.id).innerHTML.toString().toLowerCase().replace(re,'');
+			ad_html = '<script src="'+tmpCfg.src+'"><\/script>';
+
+			if(html != ad_html )
+			{
+				$('J_ads_contr_' + tmpCfg.id).innerHTML = $('J_ams_hiden_load_' + tmpCfg.id).innerHTML;
+				$('J_ads_contr_' + tmpCfg.id+"_box").style.display = 'block';
+			}
+			
+		}
+		else if (tmpCfg.type === 'js2')
+		{
+			getScript(tmpCfg.src);
+		}
+	}
+	
+	/*相机信息*/
+	var el = $('J_photo_list');
+	var photoMouseCall = function() {
+	
+		photoMouseEvent.apply(this, arguments);
+	
+	}
+		el.addEvents({
+		
+		mouseout: photoMouseCall,
+		mouseover: photoMouseCall
+	
+	});	
+		/*相机信息*/		
+	var dl = dataLazyload({
+	
+		mod:'manual',
+		diff:300
+		
+	});
+
+	dl.addCallback('J_new_act', function(){
+		
+		get_new_act(user_id,4);
+		
+	});
+	dl.addCallback('J_user_info', function(){
+		
+		new Request.JSON({
+
+			'url'        : './module/lastphoto_bottom_act.js.php',
+			'method'     : 'get',
+			'data'       : 'act=user_info&user_id=175296647&locateID=0&_=' + (new Date().getTime()),	
+			'evalScripts': true,
+			'onComplete' : function(json) {
+			
+				var template  = $('J_user_info_tpl').innerHTML;
+				var html	  = Mustache.to_html(template,json);	
+				$('J_user_info').innerHTML = html;
+				verifiedUserObj.bindElementEvent('#J_user_name em');
+
+                if (readCookie('member_id') > 0) {
+                    seajs.use(['poco/user/relation/1.1.6/relation'], function(Relation) {
+                        // 单个
+                        new Relation({
+                            trigger: '#J_user_info_relation_button',
+                            onFollow: function($target, userId) {
+                                $target.html('<span class="common-bg button-text"><em class="ico common-bg"></em>已关注</span><span class="common-bg button-text-hover">取消关注</span>').addClass('already-btn');
+                            },
+                            onUnFollow: function($target, userId) {
+                                $target.html('<span class="common-bg"><em class="ico common-bg"></em>关注</span>').removeClass('already-btn');
+                            }
+                        });
+                    });
+                } else {
+                    $('J_user_info_relation_button').addEvent('click', function() {
+                        var url = 'http://www1.poco.cn/login/?locate=';
+                        url += encodeURIComponent(document.location.toString());
+
+                        window.document.location.href = url;
+                    })
+                }
+
+			}	
+		}).send();
+	});
+
+	dl.addCallback('bottom_mod',function(){
+
+		bottom_switch(0);
+		seajs.use(['jquery','http://photo.poco.cn/dianping/js/vote.js','http://photo.poco.cn/dianping/js/boost_img.js'], function($,vote,boost_img) {
+			
+			vote.init({
+				container:'#J_dianping_container'			
+			});
+			
+			boost_img.init({
+				img_container:'#J_dianping_container'
+				
+			});
+			$('#J_dianping_container').click(function(e){
+			
+				var target 		 = e.target;
+				var is_page_link = $(target).attr("data-page-link") 
+				if( is_page_link== 1){
+				
+					var act_id = $(target).attr("data-act-id");
+					var page   = $(target).attr("data-page");
+					get_dianping_mod(act_id,page);
+					eventHalt(e);
+					
+				}
+				
+			});
+			function get_dianping_mod(act_id,page){
+			
+				var par = "act_id="+act_id+"&p="+page;
+				 $.ajax
+				({
+					type:'get',
+					dataType:'json',
+					url:'./module/dianping_mod.php',
+					data:par,
+					success:function(json_data)
+					{ 
+						if(!json_data.dianping_id_str){
+						
+							$('#bottom_switch_menu_0').hide();
+							if( login_id>0 )
+								bottom_switch(1);
+							else
+								bottom_switch(2);
+							return false;
+						}
+						$('#J_dianping_container').html(json_data.html);
+						vote.check_vote_situation(json_data.dianping_id_str);
+						
+						
+					}
+				});
+
+			}
+			get_dianping_mod('35980668',1);
+			 function eventHalt(event){
+				
+				event.preventDefault && event.preventDefault();
+				event.stopPropagation && event.stopPropagation();
+			
+			}
+			
+		});
+
+		get_more_act(genus,type,8);
+
+			
+	});
+ 
+	getScript('http://wwwcdn.poco.cn/js_common/??NzA0RkQzQjQ=.js&t=201502101234.js', {
+		callback:function(){
+		
+			/****************************收录*************************************/
+			var actInfo   = actBase.actInfo;
+			var photoData = actInfo.photoData,
+				tmpIds = [], i = 0, len = photoData.length;
+			
+			for (; i < len; i++)
+			{
+				tmpIds.push(photoData[i].photoItemId);
+			}
+			
+			tmpIds.length && itemCollect.init({
+				'photoItemIds':tmpIds,
+				'newTopicTxt':{ intro:actInfo.title}
+			});
+			cmt.setConfig({
+				onSuccAdd:function(data){
+					if (data.msg)
+					{
+						show_msg_box({
+							width:300,
+							content:data.msg,
+							time:2
+						});
+					}
+					if (typeof __reload_cmt == 'function')  __reload_cmt();
+				}
+			});
+
+
+			/*****************************收录****************************/
+			
+			// RSS
+			getScript('http://my.poco.cn/rss_gen/channel_rss_msg_box.js.php?channel_name=photo',{
+				callback:function(){
+					$('J_channel_subscribe_handle').addEvent('click',function(){
+						init_open_rss_box();
+						return false;
+					});
+				}
+			});
+			
+			subscribe_rss_box({
+				user_id:actInfo.userId,
+				username:actInfo.nickName,
+				handle:['J_act_subscribe_handle'],
+				top:[-144],
+				left:[-130]
+			});
+			/****************************分享插件*********************/
+			var actShare = new window.Share.ToolBar({
+				uniqueKey:'http://photo.poco.cn/lastphoto.htx&id=5049051',
+				type:'act',
+				channel:'photo',
+				userId:175296647,
+				title:'外星观光',
+				info:'&#60;外星观光&#62;&nbsp;听说日食过后地球万物灵动，走，我们去看看，新鲜的氧气早已漫在空中，穿透我寸寸…',
+				url:'http://photo.poco.cn/lastphoto-htx-id-5049051-p-0.xhtml',
+				pic:'http://img17.poco.cn/mypoco/myphoto/20160316/09/17529664720160316094707096_640.jpg?1500x1500_120',
+				picCount:4,
+				pocoWeiBoCfg:{
+					rt_item_id:5049051,
+					rt_act_type_id:3,
+					rt_user_id:175296647
+				},
+				onShare:function(sign){
+					
+					
+				}
+			});
+			/****************************分享插件*********************/
+
+			/****************************单图分享*********************/			
+			actSingleImg = new window.Share.SingleImg({
+			
+                containerId: 'J_photo_list', 				// 分享图片的容器ID
+                imgSelectors: 'img.photo-item',
+                uniqueKey:'http://photo.poco.cn/lastphoto.htx&id=5049051',
+                type:'image',
+                channel:'photo',
+                userId:175296647,
+                title:'外星观光',
+                info:'&#60;外星观光&#62;&nbsp;听说日食过后地球万物灵动，走，我们去看看，新鲜的氧气早已漫在空中，穿透我寸寸…',
+                url:'http://photo.poco.cn/lastphoto-htx-id-5049051-p-0.xhtml',
+                pocoWeiBoCfg:{
+                    rt_item_id:5049051,
+                    rt_act_type_id:3,
+                    rt_user_id:175296647
+                },
+                onShare:function(sign){
+                    if (!actShare.isShared(sign))
+                    {
+                        actShare.setShared(sign);
+                        actShare.changeCount();
+                    }
+                }
+            });
+			/****************************单图分享*********************/
+
+		
+		}
+	});	
+})
+
+function add_attention(user_id){
+
+	$('attention_box_'+user_id).innerHTML = '<span class="add-btn already-btn common-bg"><span class="common-bg"><em class="ico common-bg"></em>已关注</span></span>';
+
+}
+function __load_cmt_on_load_callback(){
+
+	G_CMT_LOADED = 1;
+	$('add_vote').checked = false;
+
+}
+
+if(Sys.ie6){
+
+	window.addEvent('scroll',function(){
+
+		 var scrollTop  = document.documentElement.scrollTop || document.body.scrollTop;
+		 if(scrollTop){
+			
+			$("backTop").style.top = (scrollTop + document.documentElement.clientHeight - 10) + "px";
+		 
+		 }
+		 
+	});
+
+}
+
+
+Slimbox.scanPage = function() {
+	$$("img").filter(function(el) {
+	
+		return el.className && el.className.test(/^photo-item/i);
+	
+	}).slimbox({}, null, function(el) {
+	
+		return (this == el) || ((this.className.length > 8) && (this.className == el.className));
+	
+	});
+};
+
+if (!/android|iphone|ipod|series60|symbian|windows ce|blackberry/i.test(navigator.userAgent)) {
+	window.addEvent("domready", Slimbox.scanPage);
+}
+var verifiedUserObj = new verifiedUserClass({
+	'showTime': 500,
+	'selectTagName': ['#user_intro em']//['#J_user_name em']
+});
+/*
+if(readCookie('clslj_event_link')=="hidden"){
+	
+	if($('lj_event_tip'))
+		$('lj_event_tip').style.display = 'none';
+	
+}
+*/
+</script>
+
+</body>
+<!-- m_cache:2016-03-16 14:01:42-->
+</html>
+<!--http://photo.poco.cn/lastphoto.php?&id=5049051&p=0-->
+<!-- cached at:2016-03-16 14:02:23 -->
