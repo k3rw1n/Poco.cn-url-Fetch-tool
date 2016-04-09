@@ -1,19 +1,15 @@
 # coding: utf-8
 import re
 import urllib
-from webclient import WebBrowser
+import threading
+
 
 def getHtml(url):
-    # page = urllib.urlopen(url)
-    # html = page.read()
-    # return html
-
-    # browser = WebBrowser()
-    # html = browser._request(url)
-    # print type(html)
-    # return html
-    f=open('html.txt','r')
-    return f.read()
+    page = urllib.urlopen(url)
+    html = page.read()
+    return html
+    # f=open('html.txt','r')
+    # return f.read()
 
 def saveImg(urlList):
     x = 0
@@ -33,14 +29,19 @@ def getImg(html):
     #         uf.write(str(i))
     #         uf.write('\n')
     x=0
+    threads=[]
     for imgurl in m:
-        urllib.urlretrieve(imgurl,'%s.jpg' % x)
         x = x + 1
+        t=threading.Thread(target=urllib.urlretrieve,args=(imgurl,'%s.jpg' % x))
+        # urllib.urlretrieve(imgurl,'%s.jpg' % x)
+        t.start()
+        threads.append(t)
+        
     print "OK"
 
 if __name__ == '__main__':
     # print u"请输入POCO网链接"
     # url=raw_input("> ")
     # url = 'http://photo.poco.cn/lastphoto-htx-id-5049051-p-0.xhtml'
-    html = getHtml('http://photo.poco.cn/lastphoto-htx-id-5049051-p-0.xhtml')
+    html = getHtml('http://photo.poco.cn/lastphoto-htx-id-5073227-p-0.xhtml')
     getImg(html)
